@@ -1,25 +1,18 @@
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
-    <ion-title>{{ carol.title }}</ion-title>
+    <ion-title>{{ carol.nazwa }}</ion-title>
+    <ion-buttons end>
+      <button (click)="minus()" [disabled]="minusDisabled" ion-button icon-only>
+        <ion-icon name="remove"></ion-icon>
+      </button>
+      <button (click)="plus()" [disabled]="plusDisabled" ion-button icon-only>
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<!-- <ion-content>
-      <ion-list>
-        <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-          <ion-icon [name]="item.icon" item-start></ion-icon>
-          {{item.title}}
-          <div class="item-note" item-end>
-            {{item.note}}
-          </div>
-        </button>
-      </ion-list>
-      <div *ngIf="selectedItem" padding>
-        You navigated here from <b>{{selectedItem.title}}</b>
-      </div>
-    </ion-content> -->
-
 <ion-content>
-  <pre>{{ carol.text }}</pre>
+  <pre [style.font-size.em]="fontSize">{{ carol.tekst }}</pre>
 </ion-content>

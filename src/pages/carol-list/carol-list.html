@@ -3,12 +3,19 @@
     <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
     <ion-title>Kolędy</ion-title>
   </ion-navbar>
+  <ion-searchbar
+    [showCancelButton]="true"
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)"
+    placeholder="Szukaj"
+  >
+  </ion-searchbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
     <button ion-item *ngFor="let item of items" (click)="itemTapped(item)">
-      {{ item.title }}
+      {{ item.nazwa }}
     </button>
   </ion-list>
 </ion-content>
