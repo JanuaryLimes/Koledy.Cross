@@ -6,7 +6,13 @@
       <button (click)="minus()" [disabled]="minusDisabled" ion-button icon-only>
         <ion-icon name="remove"></ion-icon>
       </button>
-      <button (click)="plus()" [disabled]="plusDisabled" ion-button icon-only>
+      <button
+        (click)="plus()"
+        [disabled]="plusDisabled"
+        ion-button
+        icon-only
+        style="padding-left: 0.75em;"
+      >
         <ion-icon name="add"></ion-icon>
       </button>
     </ion-buttons>
