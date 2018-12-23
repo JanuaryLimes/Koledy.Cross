@@ -1,4 +1,8 @@
 export class Carol {
-  title: string;
-  text: string;
+  nazwa: string;
+  tekst: string;
+}
+
+export class CarolList {
+  carols: Carol[];
 }

@@ -22,7 +22,16 @@ import { CarolItemPage } from '../pages/carol-item/carol-item';
     CarolListPage,
     CarolItemPage
   ],
-  imports: [BrowserModule, IonicModule.forRoot(MyApp)],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(MyApp, {
+      platforms: {
+        ios: {
+          backButtonText: 'Wstecz'
+        }
+      }
+    })
+  ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
